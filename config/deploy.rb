@@ -18,7 +18,7 @@ set :via, "scp"
 
 set :branch, "master"
 
-server "imhotep.ee", :app, :web, :db, :primary => true
+server "80.79.120.193", :app, :web, :db, :primary => true
 
 after 'deploy:update', 'bundle:install'
 
