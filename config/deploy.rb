@@ -10,7 +10,7 @@ set :repository,  "git@github.com:peipus/imhotep.git"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "/home/rails_app/imhotep"
+set :deploy_to, "/home/imhotepe/rails_app/imhotep"
 set :user, "imhotepe"
 
 set :scm_username, "peipus"
