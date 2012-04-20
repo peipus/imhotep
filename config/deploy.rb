@@ -7,10 +7,25 @@ set :repository,  "git@github.com:peipus/imhotep.git"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "Apache"                          # Your HTTP server, Apache/etc
-role :app, "Mongrel"                          # This may be the same as your `Web` server
-role :db,  "MySQL", :primary => true # This is where Rails migrations will run
-role :db,  "MySQL"
+set :deploy_to, "/home/rails_app/imhotep"
+set :user, "imhotepe"
+
+set :scm_username, "peipus"
+
+set :use_sudo, false
+
+set :via, "scp"
+
+set :branch, "master"
+
+server "imhotep.ee", :app, :web, :db, :primary => true
+
+after 'deploy:update', 'bundle:install'
+
+# role :web, "Apache"                          # Your HTTP server, Apache/etc
+# role :app, "Mongrel"                          # This may be the same as your `Web` server
+# role :db,  "MySQL", :primary => true # This is where Rails migrations will run
+# role :db,  "MySQL"
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
