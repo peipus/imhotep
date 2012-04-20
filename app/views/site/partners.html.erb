@@ -1,0 +1,73 @@
+
+
+<div class="header2">
+  <%=  @partners.title %>
+
+</div>
+<div class="main2">
+
+  <table>
+
+    <tr>
+
+      <td class="content_p">
+
+        <h2>
+          <%= t("Наши партнеры") %>
+        </h2>
+
+        <h3>
+          <%= raw textilize( @partners.body ) %>
+        </h3>
+      </td>
+
+      <td style="vertical-align: top;">
+
+        
+
+           
+
+
+    <a id="otherGallery"  href="#"><img src="/images/imhotepkomp.png" alt=""/></a>
+
+
+          
+
+    
+
+      </td>
+
+
+    </tr>
+
+
+  </table>
+
+
+  <div>
+
+
+  </div>
+
+
+</div>
+
+<script type="text/javascript" charset="utf8">
+
+$(function(){
+  $("#lightBox a[rel^='prettyPhoto']").prettyPhoto({
+
+  });
+
+  $("#otherGallery").click(function(){
+
+  	images = [ <% @part.each do |act| %> '<%= (act.image_url.to_s) %>',  <%end%> ];
+	titles = false;
+	descriptions = false;
+	$.prettyPhoto.open(images);
+  });
+});
+
+</script>
+
+

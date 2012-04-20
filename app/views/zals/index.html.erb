@@ -1,0 +1,54 @@
+<div class="header2">
+Административнвя панель
+</div>
+
+<div class="main2">
+
+
+
+<table>
+
+  <tr>
+
+    <td style="text-align: left;">
+
+      <%= render :partial => '/layouts/side.html.erb' %>
+
+    </td>
+
+
+    <td style="vertical-align: top;">
+
+
+
+<h1>Фотогалерея "Жалюзи"</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zals.each do |zal| %>
+  <tr>
+    <td><%= image_tag(zal.image_url.to_s, :width => 100) %></td>
+    
+    <td><%= button_to 'Удалить', zal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h3><%= link_to 'ДОБАВИТЬ ФОТОГРАФИЮ', new_zal_path %></h3>
+
+
+ </td>
+
+  </tr>
+
+</table>
+
+  </div>

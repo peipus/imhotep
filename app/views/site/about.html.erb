@@ -1,0 +1,59 @@
+<div class="header2">
+<%=  @ab.title %>
+
+</div>
+
+<div class="main2">
+
+
+
+
+  <div class="content">
+
+
+
+ <%= raw textilize( @ab.body ) %>
+
+</div>
+
+
+
+  <div class="photo">
+
+   
+
+<script type="text/javascript" charset="utf8">
+
+$(function(){
+  $("#lightBox a[rel^='prettyPhoto']").prettyPhoto({
+ 
+  });
+
+  $("#otherGallery").click(function(){
+        
+  	images = [ <% @about.each do |about| %> '<%= (about.image_url.to_s) %>',  <%end%>];
+	titles = false;
+	descriptions = false;
+	$.prettyPhoto.open(images);
+  });
+});
+
+</script>
+
+
+     
+
+  <a id="otherGallery"  href="#"><img src="/images/firmast.jpg" alt=""width="250px"/></a>
+
+
+
+
+ 
+  </div>
+
+
+
+</div>
+
+
+

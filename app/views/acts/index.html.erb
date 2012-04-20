@@ -1,0 +1,50 @@
+<div class="header2">
+Административнвя панель
+</div>
+
+<div class="main2">
+
+
+
+<table>
+
+  <tr>
+
+    <td style="text-align: left;">
+
+      <%= render :partial => '/layouts/side.html.erb' %>
+
+    </td>
+
+
+    <td style="vertical-align: top;">
+
+<h1>Фотогалерея "Виды деятельности"</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @acts.each do |act| %>
+  <tr>
+    <td><%= image_tag(act.image_url.to_s, :width => 100) %></td>
+       <td style="padding-left:25px;"><%= button_to 'Удалить', act, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h3><%= link_to 'ДОБАВИТЬ ФОТОГРАФИЮ', new_act_path %></h3>
+
+ </td>
+
+  </tr>
+
+</table>
+
+  </div>

@@ -1,0 +1,21 @@
+<%= form_for(@dver, :html => {:multipart =>true}) do |f| %>
+  <% if @dver.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dver.errors.count, "error") %> prohibited this dver from being saved:</h2>
+
+      <ul>
+      <% @dver.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Фотография %><br />
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Добавить"%>
+  </div>
+<% end %>

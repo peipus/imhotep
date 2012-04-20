@@ -1,0 +1,202 @@
+/* 
+    Document   : imhotep
+    Created on : 26.08.2011, 12:32:39
+    Author     : peipus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+/* CSS Document */
+
+@charset "utf-8";
+
+html body{
+text-align:center;
+background-image:url(/images/images/bg3.gif);
+background-repeat:repeat-x;
+}
+
+
+
+:visited{
+    color: #8F293F;
+    text-decoration: none;
+}
+
+:active{
+    color: #8F293F;
+    text-decoration: none;
+}
+
+.header{
+background-image:url(/images/images/header1.png);
+width:1000px;
+height:257px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.header1{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+height:22px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:13px;
+color:#8F293F;
+}
+
+.header2{
+background-color:#8F293F;
+height:40px;
+width:980px;
+margin-left:auto;
+margin-right:auto;
+margin-top: 5px;
+margin-bottom: 10px;
+border-top-left-radius: 25px;
+color: #FFFFFF;
+text-align: left;
+padding-left: 20px;
+padding-top: 16px;
+font-weight: bold;
+font-size: 16px;
+}
+
+.menu{
+height:207px;
+margin-left:720px;
+text-align:left;
+padding-left:20px;
+padding-top:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:15px;
+color:#8F293F;
+line-height:3.0;
+
+}
+
+.lang{
+margin-left:720px;
+text-align:left;
+padding-left:20px;
+letter-spacing:20px;
+margin-top:-14px;
+}
+
+.main{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+height: auto;
+}
+
+.main2{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+margin-top: 40px;
+box-shadow: -10px -10px 10px #cad7e0;
+-webkit-box-shadow: -10px -10px 10px #cad7e0;
+height: auto;
+border-top-left-radius: 25px;
+display: block;
+position: relative;
+}
+
+
+
+.content{
+width:680px;
+display: block;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:15px;
+float:left;
+margin-left: 15px;
+text-align:left;
+color: #000000;
+padding-left: 20px;
+padding-right: 20px;
+height: auto;
+position: relative;
+}
+
+.content_p{
+width:330px;
+display: block;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:15px;
+float:left;
+margin-left: 15px;
+text-align:left;
+color: #000000;
+padding-left: 20px;
+padding-right: 20px;
+height: auto;
+position: relative;
+}
+
+.photo{
+    width: 250px;
+    margin-left: 735px;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+}
+
+.footer{
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+   display: block;
+    border-top:2px solid #cad7e0;
+position: relative;
+}
+
+.part{
+    width:180px;
+    margin-right: 40px;
+    line-height: 12px;
+    padding-right: 20px;
+    }
+
+    h5.part{
+        text-align: right;
+}
+
+.button{
+    width: 150px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 16px;
+      -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+
+}
+
+.button2{
+
+    margin: 20px;
+    font-weight: bold;
+    font-size: 14px;
+      -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+
+}

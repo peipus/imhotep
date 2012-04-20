@@ -1,0 +1,54 @@
+<div class="header2">
+Административнвя панель
+</div>
+
+<div class="main2">
+
+
+
+<table>
+
+  <tr>
+
+    <td style="text-align: left;">
+
+      <%= render :partial => '/layouts/side.html.erb' %>
+
+    </td>
+
+
+    <td style="vertical-align: top;">
+
+
+
+<h1>Фотогалерея "О фирме"</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @abouts.each do |about| %>
+  <tr>
+   <td><%= image_tag(about.image_url.to_s, :width => 100) %></td>
+  
+    <td style="padding-left:25px;"><%= button_to 'Удалить', about, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<br />
+
+<h3><%= link_to 'ДОБАВИТЬ ФОТОГРАФИЮ', new_about_path %></h3>
+
+ </td>
+  
+  </tr>
+
+</table>
+
+  </div>

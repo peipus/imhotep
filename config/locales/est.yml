@@ -1,0 +1,14 @@
+## YAML Template.
+---
+est:
+
+   О фирме: "Firmast"
+   Виды деятельности: "Tegevusalad"
+   Партнеры: "Partnerid"
+   Контакт: "Kontaktid"
+   Общестроительные работы: "Üldetitustööd"
+   Окна: "Aknad"
+   Двери: "Uksed"
+   Жалюзи: "Kardinad"
+   Наши партнеры: "Meie partnerid"
+   Котакты: "Kontaktid"

@@ -1,0 +1,60 @@
+
+<div class="header2">
+  <%=  @shade.title %>
+
+</div>
+
+
+<div class="main2">
+
+  <table>
+
+    <tr>
+
+      <td class="content">
+        <%= raw textilize( @shade.body ) %>
+      </td>
+
+      <td style="vertical-align: top;">
+
+        <a id="otherGallery"  href="#"><img src="/images/zal.jpg" alt=""width="260px"/></a>
+
+      </td>
+
+
+    </tr>
+
+
+  </table>
+
+
+  <div>
+
+
+  </div>
+
+
+</div>
+
+<script type="text/javascript" charset="utf8">
+
+$(function(){
+  $("#lightBox a[rel^='prettyPhoto']").prettyPhoto({
+
+  });
+
+  $("#otherGallery").click(function(){
+
+  	images = [ <% @zal.each do |act| %> '<%= (act.image_url.to_s) %>',  <%end%> ];
+	titles = false;
+	descriptions = false;
+	$.prettyPhoto.open(images);
+  });
+});
+
+</script>
+
+
+
+
+

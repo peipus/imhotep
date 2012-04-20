@@ -1,0 +1,2 @@
+module StesEsHelper
+end

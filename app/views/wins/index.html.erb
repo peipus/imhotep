@@ -1,0 +1,51 @@
+<div class="header2">
+Административнвя панель
+</div>
+
+<div class="main2">
+
+
+
+<table>
+
+  <tr>
+
+    <td style="text-align: left;">
+
+      <%= render :partial => '/layouts/side.html.erb' %>
+
+    </td>
+
+
+    <td style="vertical-align: top;">
+
+<h1>Фотогалерея "Окна"</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wins.each do |win| %>
+  <tr>
+    <td><%= image_tag(win.image_url.to_s, :width => 100) %></td>
+   
+    <td style="padding-left:25px;"><%= button_to 'Удалить', win, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h3><%= link_to 'ДОБАВИТЬ ФОТОГРАФИЮ', new_win_path %></h3
+
+ </td>
+
+  </tr>
+
+</table>
+
+  </div>

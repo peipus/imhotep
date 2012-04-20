@@ -1,0 +1,27 @@
+<h1>Listing stes_es</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stes_es.each do |stes_e| %>
+  <tr>
+    <td><%= stes_e.name %></td>
+    <td><%= stes_e.title %></td>
+    <td><%= stes_e.body %></td>
+    <td><%= link_to 'Show', stes_e %></td>
+    <td><%= link_to 'Edit', edit_stes_e_path(stes_e) %></td>
+    <td><%= button_to 'Destroy', stes_e, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stes e', new_stes_e_path %>
