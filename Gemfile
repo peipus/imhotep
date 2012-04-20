@@ -16,6 +16,7 @@ gem 'mysql'
 
 group :development do
   gem 'capistrano'
+  gem 'capistrano-deploy'
 
 end
 
