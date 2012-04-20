@@ -1,3 +1,6 @@
+require 'capistrano-deploy'
+use_recipes :git, :bundle, :rails
+
 require "mongrel_cluster/recipes"
 
 
