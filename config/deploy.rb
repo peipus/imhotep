@@ -21,7 +21,7 @@ set :via, "scp"
 
 
 
-server "imhotep.ee", :app, :web, :db, :primary => true
+server "-p 22122 imhotepe@imhotep.ee", :app, :web, :db, :primary => true
 set :deploy_to, "/home/imhotepe/rails_app/imhotep"
 set :user, "imhotepe"
 
