@@ -1,27 +1,29 @@
 require 'capistrano-deploy'
 use_recipes :git, :bundle, :rails
 
-require "mongrel_cluster/recipes"
+
 
 
 set :application, "imhotep"
 set :repository,  "git@github.com:peipus/imhotep.git"
-
+set :branch, "master"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "/home/imhotepe/rails_app/imhotep"
-set :user, "imhotepe"
 
-set :scm_username, "peipus"
+
+
+
 
 set :use_sudo, false
 
 set :via, "scp"
 
-set :branch, "master"
 
-server "80.79.120.193", :app, :web, :db, :primary => true
+
+server "imhotep.ee", :app, :web, :db, :primary => true
+set :deploy_to, "/home/imhotepe/rails_app/imhotep"
+set :user, "imhotepe"
 
 after 'deploy:update', 'bundle:install'
 
