@@ -9,7 +9,7 @@ Imhotep::Application.load_tasks
 begin
  require 'rubygems'
  require 'vlad'
-
+Vlad.load :scm => :git, :app => :mongrel
 rescue LoadError => e
  $stderr << "Error loading vlad: #{e}"
 end
