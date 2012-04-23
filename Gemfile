@@ -22,6 +22,11 @@ group :development do
 
 end
 
+group :development do
+  gem 'vlad-git'
+  gem 'vlad'
+end
+
 group :deploy do
   gem 'vlad', ">=2.2.0"
   gem "vlad-git"
