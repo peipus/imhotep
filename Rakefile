@@ -6,9 +6,3 @@ require 'rake'
 
 Imhotep::Application.load_tasks
 
-begin
-  require 'vlad'
-  Vlad.load
-rescue LoadError
-  # do nothing
-end
