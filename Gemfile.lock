@@ -89,10 +89,11 @@ GEM
       activesupport (= 3.0.3)
       rake (>= 0.8.7)
       thor (~> 0.14.4)
-    rake (0.9.2.2)
+    rake (0.8.7)
     rake-remote_task (2.0.6)
       open4 (~> 1.0)
       rake (~> 0.8)
+    rdoc (3.9.2)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
@@ -120,5 +121,7 @@ DEPENDENCIES
   jquery-rails
   mysql
   rails (= 3.0.3)
+  rake (= 0.8.7)
+  rdoc
   vlad (>= 2.2.0)
   vlad-git

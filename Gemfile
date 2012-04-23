@@ -7,6 +7,8 @@ gem 'carrierwave'
 gem 'jquery-rails'
 gem 'i18n'
 gem 'devise'
+gem 'rake', '0.8.7'
+gem 'rdoc'
 
 
 # Bundle edge Rails instead:
