@@ -24,11 +24,11 @@ end
 
 group :development do
   gem 'vlad-git'
-  gem 'vlad, ">=2.2.0"'
+  gem 'vlad'
 end
 
 group :deploy do
-  gem 'vlad', ">=2.2.0"
+  gem 'vlad'
   gem "vlad-git"
    gem 'capistrano'
   gem 'capistrano-deploy'

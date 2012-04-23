@@ -123,5 +123,5 @@ DEPENDENCIES
   rails (= 3.0.3)
   rake (= 0.8.7)
   rdoc
-  vlad (>= 2.2.0)
+  vlad
   vlad-git
