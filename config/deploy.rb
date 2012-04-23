@@ -28,6 +28,25 @@ server "imhotep.ee:22122", :app, :web, :db, :primary => true
 set :deploy_to, "/home/imhotepe/rails_app/imhotep"
 set :user, "imhotepe"
 
+namespace :deploy do
+  namespace :pending do
+    desc <<-DESC
+      Show the commits since the last deploy
+    DESC
+    task :default, :except => { :no_release => true } do
+      deployed_already = current_revision
+      to_be_deployed = `git rev-parse --short "HEAD"`
+
+      puts "\n\nDeployment revision #{to_be_deployed}"
+      puts "I deployed the latest. It includes:"
+      puts
+      system(%Q{git log --no-merges --pretty=format:"* %s %b (%cn)" #{deployed_already}.. | replace '<unknown>' ''})
+      puts "\n\n\n"
+    end
+  
+  end
+end
+
 after 'deploy:update', 'bundle:install'
 
 # role :web, "Apache"                          # Your HTTP server, Apache/etc
