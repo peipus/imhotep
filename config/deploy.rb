@@ -4,7 +4,7 @@ use_recipes :git, :bundle, :rails
 
 
 
-set :application, "imhotep"
+
 set :repository,  "git@github.com:peipus/imhotep.git"
 set :branch, "master"
 set :scm, :git
@@ -15,12 +15,15 @@ set :scm, :git
 
 
 
+
+set :deploy_via, :remote_cache
+set :scm, :git
+set :branch, 'master'
+set :scm_verbose, true
 set :use_sudo, false
 
-set :via, "scp"
 
-
-
+set :application, "imhotep"
 server "imhotep.ee:22122", :app, :web, :db, :primary => true
 set :deploy_to, "/home/imhotepe/rails_app/imhotep"
 set :user, "imhotepe"
