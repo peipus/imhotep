@@ -23,7 +23,7 @@ group :development do
 end
 
 group :development do
-  gem 'vlad-git'
+  gem 'vlad-git, ">=2.2.0"'
   gem 'vlad'
 end
 
