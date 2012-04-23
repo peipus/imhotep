@@ -1,5 +1,45 @@
-require 'capistrano-deploy'
-use_recipes :git, :bundle, :rails
+# -*- coding: utf-8 -*-
+namespace :vlad do
+  set :application, "imhotep"
+  set :domain, "imhotepe@imhotep.ee:22122"
+  set :rails_env, "production"
+  set :deploy_to, "/home/imhotepe/rails_app/imhotep"
+  # set :revision,  current_revision # 'master/HEAD'
+  set :keep_releases, 3
+  set :repository, 'git@github.com:peipus/imhotep.git'
+
+
+  #set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
+
+  # for rails
+  set :shared_paths, {
+    'log'    => 'log',
+    'system' => 'public/system',
+    'pids'   => 'tmp/pids',
+    'bundle' => 'vendor/bundle',
+    'config/database.yml' => 'config/database.yml',
+    'config/settings' => 'config/settings',
+    'config/settings.yml' => 'config/settings.yml'
+  }
+
+  # set :copy_files, {
+  #   '/config/database.yml' => '/config/database.yml',
+  #   '/config/settings*'    => '/config/',
+  # }
+
+  desc "Full deployment cycle"
+  task "deploy" => %w[
+      vlad:update
+      vlad:bundle_install
+      vlad:migrate
+      vlad:start_app
+      vlad:hoptoad
+      vlad:cleanup
+    ]
+
+
+
+
 
 
 
