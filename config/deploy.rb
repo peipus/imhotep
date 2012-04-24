@@ -2,7 +2,7 @@
 namespace :vlad do
   set :application, "imhotep"
   set :domain, "imhotepe@imhotep.ee:22122"
-  set :rails_env, "production"
+  set :rails_env, "development"
   set :deploy_to, "/home/imhotepe/rails_app/imhotep"
   # set :revision,  current_revision # 'master/HEAD'
   set :keep_releases, 3
