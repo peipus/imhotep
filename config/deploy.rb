@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+require "bundler/vlad"
+require "bundler/vlad-git"
+
 namespace :vlad do
   set :application, "imhotep"
   set :domain, "imhotepe@imhotep.ee:22122"
