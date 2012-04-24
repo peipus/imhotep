@@ -7,10 +7,8 @@ require 'rake'
 Imhotep::Application.load_tasks
 
 begin
- require 'rubygems'
- require 'vlad'
-Vlad.load :scm => :git, :app => :mongrel
-rescue LoadError => e
- $stderr << "Error loading vlad: #{e}"
+  require 'vlad'
+  Vlad.load
+rescue LoadError
+  # do nothing
 end
-
