@@ -7,8 +7,6 @@ gem 'carrierwave'
 gem 'jquery-rails'
 gem 'i18n'
 gem 'devise'
-gem 'rake', '0.8.7'
-gem 'rdoc'
 
 
 # Bundle edge Rails instead:
@@ -22,13 +20,8 @@ group :development do
 
 end
 
-group :development do
-  gem 'vlad-git'
-  gem 'vlad'
-end
-
 group :deploy do
-  gem 'vlad'
+  gem 'vlad', ">=2.2.0"
   gem "vlad-git"
    gem 'capistrano'
   gem 'capistrano-deploy'
