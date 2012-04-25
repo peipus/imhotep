@@ -1,4 +1,5 @@
-require 'capistrano-deploy'
+require "bundler/capistrano"
+
 use_recipes :git, :bundle, :rails
 
 
