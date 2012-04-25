@@ -15,16 +15,13 @@ gem 'devise'
 gem 'mysql'
 
 group :development do
-  gem 'capistrano'
+
 
 
 end
 
 group :deploy do
-  gem 'vlad', ">=2.2.0"
-  gem "vlad-git"
-   gem 'capistrano'
-  gem 'capistrano-deploy'
+
 end
 
 # Use unicorn as the web server
