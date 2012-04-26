@@ -6,7 +6,7 @@ set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 set :port, 22122
-
+set :password, "293sLdUt8t"
 
 set :deploy_to, "/home/imhotepe/rails_apps/imhotep"
 
