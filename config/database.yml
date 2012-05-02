@@ -9,9 +9,9 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: imhotep_development
+  database: imhotepe_imhotep
   pool: 5
-  username: root
+  username: imhotepe_imhotep
   password: cenf33ca
   socket: /var/run/mysqld/mysqld.sock
 
@@ -32,9 +32,9 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: imhotep_production
+  database: imhotepe_imhotep
   pool: 5
-  username: root
+  username: imhotepe_imhotep
   password: cenf33ca
   socket: /var/run/mysqld/mysqld.sock
 
