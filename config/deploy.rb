@@ -10,7 +10,7 @@ set :deploy_via, :copy
 
 set :checkout, 'export'
 
-set :use_sudo, :true
+set :use_sudo, true
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
