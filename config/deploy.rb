@@ -44,10 +44,7 @@ namespace :deploy do
   
 end
 
-set :rake, "rake"
-set :rails_env, "production"
-set :migrate_env, ""
-set :migrate_target, :latest 
+
 
 
 # if you want to clean up old releases on each deploy uncomment this:
