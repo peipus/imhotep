@@ -7,8 +7,9 @@ set :user, "imhotepe"
 set :repository,  "git@github.com:peipus/imhotep.git"
 
 set :deploy_via, :copy
+set :copy_exclude, [".svn", ".git"]
 
-set :checkout, 'export'
+# set :checkout, 'export'
 
 set :use_sudo, false
 
@@ -28,11 +29,7 @@ set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
 namespace :deploy do
   
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
+
    
 
    after "deploy:setup", "deploy:gems"     
