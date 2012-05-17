@@ -1,6 +1,16 @@
+require 'bundler/capistrano'
+
+default_run_options[:pty] = true
+
 set :application, "imhotep"
 set :user, "imhotepe"
 set :repository,  "git@github.com:peipus/imhotep.git"
+
+set :deploy_via, :copy
+
+set :checkout, 'export'
+
+set :use_sudo, false
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -13,6 +23,31 @@ set :deploy_to, "/home/imhotepe/rails_apps/imhotep"
 role :web, "imhotep.ee"                          # Your HTTP server, Apache/etc
 role :app, "imhotep.ee"                          # This may be the same as your `Web` server
 role :db,  "imhotep.ee", :primary => true # This is where Rails migrations will run
+
+set :chmod755, "app config db lib public vendor script script/* public/disp*"
+
+namespace :deploy do
+  
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+   desc "Installs required gems"  
+   task :gems, :roles => :app do  
+     run "cd #{current_path} && sudo rake gems:install RAILS_ENV=production"  
+   end  
+   after "deploy:setup", "deploy:gems"     
+  
+   before "deploy", "deploy:web:disable"  
+   after "deploy", "deploy:web:enable" 
+  
+end
+
+set :rake, "rake"
+set :rails_env, "production"
+set :migrate_env, ""
+set :migrate_target, :latest 
 
 
 # if you want to clean up old releases on each deploy uncomment this:
