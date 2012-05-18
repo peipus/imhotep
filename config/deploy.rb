@@ -29,14 +29,18 @@ set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
 namespace :deploy do
   
-
-   
-
    after "deploy:setup", "deploy:gems"     
   
    before "deploy", "deploy:web:disable"  
    after "deploy", "deploy:web:enable" 
   
+end
+
+namespace :gems do
+  desc "Install gems"
+  task :install, :roles => :app do
+    run "cd #{current_release} && #{sudo} rake gems:install"
+  end
 end
 
 
