@@ -2,7 +2,6 @@ require 'bundler/capistrano'
 
 default_run_options[:pty] = true
 
-require "rvm/capistrano"
 
 $:.push("/home/imhotepe/ruby/gems")
 
