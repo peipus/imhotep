@@ -31,14 +31,7 @@ role :db,  "imhotep.ee", :primary => true # This is where Rails migrations will 
 
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
-namespace :deploy do
-  
-   after "deploy:setup", "deploy:gems"     
-  
-   before "deploy", "deploy:web:disable"  
-   after "deploy", "deploy:web:enable" 
-  
-end
+
 
 
 
