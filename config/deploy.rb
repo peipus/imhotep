@@ -3,6 +3,7 @@ require 'bundler/capistrano'
 default_run_options[:pty] = true
 
 
+
 $:.push("/home/imhotepe/ruby/gems")
 
 set :application, "imhotep"
