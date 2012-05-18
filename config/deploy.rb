@@ -6,7 +6,7 @@ set :application, "imhotep"
 set :user, "imhotepe"
 set :repository,  "git@github.com:peipus/imhotep.git"
 
-set :deploy_via, :copy
+set :deploy_via, :checkout
 set :copy_exclude, [".svn", ".git"]
 
 # set :checkout, 'export'
