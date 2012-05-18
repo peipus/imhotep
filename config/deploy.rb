@@ -2,6 +2,10 @@ require 'bundler/capistrano'
 
 default_run_options[:pty] = true
 
+require "rvm/capistrano"
+
+$:.push("/home/imhotepe/ruby/gems")
+
 set :application, "imhotep"
 set :user, "imhotepe"
 set :repository,  "git@github.com:peipus/imhotep.git"
