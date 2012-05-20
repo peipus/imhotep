@@ -1,6 +1,6 @@
 set :application, "imhotep"
-set :user, "imhotepe"
-set :domain, "imhotep.ee"
+
+set :domain, "imhotepe@imhotep.ee"
 set :sudo_cmd, "sudo"
 set :ssh_cmd, "ssh"
 set :ssh_flags, ['-p 22122']
