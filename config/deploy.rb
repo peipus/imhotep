@@ -1,10 +1,12 @@
-set :application, "imhotewp"
+set :application, "imhotep"
+set :user, "imhotepe"
 set :domain, "imhotepe@imhotep.ee:22122"
+set :password, '293sLdUt8t'
 set :port, 22122
 set :deploy_to, "/home/imhotepe/rails_apps/imhotep"
 set :repository, 'git@github.com:peipus/imhotep.git'
 
-set :sudo_password, '293sLdUt8t'
+
 
 
 
