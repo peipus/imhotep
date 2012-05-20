@@ -8,7 +8,7 @@ set :ssh_flags, ['-p 22122']
 set :deploy_to, "/home/imhotepe/rails_apps/imhotep"
 set :repository, 'git@github.com:peipus/imhotep.git'
 
- default_run_options[:pty] = true
+
 
 
 
