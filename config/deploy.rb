@@ -1,7 +1,5 @@
-
-
 set :application, "imhotep"
-
+set :user, "imhotepe"
 set :domain, "imhotepe@imhotep.ee"
 set :sudo_cmd, "sudo"
 set :ssh_cmd, "ssh"
