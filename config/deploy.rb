@@ -1,4 +1,4 @@
-default_run_options[:pty] = true
+
 
 set :application, "imhotep"
 
