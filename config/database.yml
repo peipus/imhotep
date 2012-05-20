@@ -9,11 +9,11 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: imhotepe_imhotep
+  database: imhotep_development
   pool: 5
-  username: imhotepe_imhotep
+  username: root
   password: cenf33ca
-  socket: /tmp/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,19 +22,19 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: imhotepe_imhotep
+  database: imhotep_test
   pool: 5
-  username: imhotepe_imhotep
+  username: root
   password: cenf33ca
-  socket: /tmp/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: imhotepe_imhotep
+  database: imhotep_production
   pool: 5
-  username: imhotepe_imhotep
+  username: root
   password: cenf33ca
-  socket: /tmp/mysqld.sock
+  socket: /var/run/mysqld/mysqld.sock
 

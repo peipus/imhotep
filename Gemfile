@@ -14,14 +14,9 @@ gem 'devise'
 
 gem 'mysql2'
 
-group :development do
-
-gem 'capistrano', '2.6.0'
-
-end
 
 group :deploy do
-  gem 'capistrano', '2.6.0'
+  gem 'vlad'
 
 end
 
