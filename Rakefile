@@ -8,7 +8,7 @@ Imhotep::Application.load_tasks
 
 begin
   require 'vlad'
-  Vlad.load :app => :imhotep, :scm => :git
+  Vlad.load :app => :imhotep, :scm => :git, :domain => 'imhotep.ee'
 rescue LoadError
   # do nothing
 end
