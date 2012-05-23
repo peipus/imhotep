@@ -5,10 +5,3 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 Imhotep::Application.load_tasks
-
-begin
-  require 'vlad'
-  Vlad.load :scm => :git
-rescue LoadError
-  # do nothing
-end
