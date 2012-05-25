@@ -13,7 +13,7 @@ gem 'devise'
 #gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'multi_json', '1.3.1'
+# gem 'multi_json', '1.3.1'
 
 
 
