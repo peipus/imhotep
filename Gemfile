@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 # gem 'annotate', '2.4.0'
-gem 'RedCloth', '4.2.9', :require => 'redcloth'
+gem 'RedCloth', '4.2.7', :require => 'redcloth'
 gem 'carrierwave'
 # gem 'jquery-rails'
 gem 'i18n'
