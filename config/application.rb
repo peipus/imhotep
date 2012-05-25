@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
- $:.push("/home/your_project_name/ruby/gems")
+ $:.push("/home/imhotep/ruby/gems")
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
